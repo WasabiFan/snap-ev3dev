@@ -1,0 +1,3 @@
+[submodule "snap"]
+	path = snap
+	url = https://github.com/WasabiFan/Snap--Build-Your-Own-Blocks.git
