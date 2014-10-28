@@ -17,3 +17,7 @@ root@ev3dev:~# cd snap-ev3dev
 root@ev3dev:~# nodejs snap-server.js
 ```
 You should now be able to access the Snap! environment by navigating to your EV3's IP address in your browser.
+
+ev3dev.js
+---
+`ev3dev.js` is a built development version of the JS binding from [the official ev3dev language binding repo](https://github.com/ev3dev/ev3dev-lang/). Once the changes to the binding have been released to NPM, the dependency here can be shifted to the published module instead of using this separate file.
