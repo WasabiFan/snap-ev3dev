@@ -192,7 +192,7 @@ var Motor = (function (_super) {
                 var satisfiesCondition = ((port == ports.OUTPUT_AUTO) || (port == undefined) || (portName === port)) && ((type == undefined || type == '') || motorType == type);
 
                 if (satisfiesCondition) {
-                    this._deviceIndex = Number(file.substring('tacho-motor'.length));
+                    this._deviceIndex = Number(file.substring('motor'.length));
                     break;
                 }
             }
@@ -764,9 +764,12 @@ var PowerSupply = (function (_super) {
 ///<reference path="io.ts" />
 ///<reference path="motor.ts" />
 ///<reference path="sensor.ts" />
+///<reference path="extras.ts" />
 module.exports.ports = ports;
 
 /* CLASS EXPORTS */
 module.exports.Device = Device;
 module.exports.Motor = Motor;
 module.exports.Sensor = Sensor;
+module.exports.I2CSensor = I2CSensor;
+module.exports.PowerSupply = PowerSupply;
