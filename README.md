@@ -22,8 +22,8 @@ Using the ev3 functions in the web interface
 ---
 Although I don't think I need to explain how the overall drag-and-drop experience works to anyone who's cloning this right now, I would like to highlight the important changes that I have made to the Snap! environment for this project.
 
-To access the ev3dev control blocks (currently only one), open the web interface and click on "file (the paper icon) -> Libraries". In the box that appears, select "ev3dev control functions" to load the module. Now, you should find  new sensor blocks under "sensing" and new motor blocks under "motion".
-Be careful and use valid portname and properties.
+To access the ev3dev control blocks, open the web interface and click on "file (the paper icon) -> Libraries". In the box that appears, select "ev3dev control functions" to load the module. Now, you should find  new sensor blocks under "sensing" and new motor blocks under "motion".
+Be careful and use valid port and property names, as described in the ev3dev motor docs.
 
 ev3dev.js
 ---
