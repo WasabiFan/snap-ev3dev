@@ -198,6 +198,7 @@ var Motor = (function (_super) {
             }
 
             if (this.deviceIndex == -1) {
+                console.log('no device found');
                 this.connected = false;
                 return;
             }
