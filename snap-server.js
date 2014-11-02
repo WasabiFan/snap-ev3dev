@@ -2,7 +2,7 @@ var static = require('node-static');
 var http = require('http');
 var ev3 = require('./ev3dev.js');
 
-var fileServer = new static.Server("./snap");
+var fileServer = new static.Server("./snap", { cache: 0 });
 
 var sensors = {}, motors = {};
 
@@ -25,6 +25,9 @@ http.createServer(function (req, res) {
         var endPath = pathParts[pathParts.length - 1];
         var value = evaluateFunctionEndpoint(endPath, reqPath.query);
 
+        res.writeHead(200, {
+            'Cache-Control': 'no-cache'
+        });
         res.end(value.toString());
     }
     //Otherwise, assume it's looking for Snap! files
